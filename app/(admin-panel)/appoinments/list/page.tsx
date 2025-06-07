@@ -310,8 +310,10 @@ const AppointmentsPage = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Appointments</h1>
-          <p className="text-gray-600 mt-1">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-yellow-100">
+            Appointments
+          </h1>
+          <p className="text-gray-600 mt-1 dark:text-blue-100">
             Manage and track all patient appointments
           </p>
         </div>
@@ -320,17 +322,18 @@ const AppointmentsPage = () => {
             variant="outline"
             onClick={handleRefresh}
             disabled={isRefreshing}
+            className="dark:bg-slate-900"
           >
             <RefreshCw
               className={`w-4 h-4 mr-2 ${isRefreshing ? "animate-spin" : ""}`}
             />
             Refresh
           </Button>
-          <Button variant="outline">
+          <Button variant="outline" className="dark:bg-slate-900">
             <Download className="w-4 h-4 mr-2" />
             Export
           </Button>
-          <Button>
+          <Button className="dark:bg-slate-900 dark:text-white">
             <Plus className="w-4 h-4 mr-2" />
             New Appointment
           </Button>
@@ -339,7 +342,7 @@ const AppointmentsPage = () => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <Card>
+        <Card className="dark:bg-[#293549]">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -355,7 +358,7 @@ const AppointmentsPage = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="dark:bg-[#293549]">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -371,7 +374,7 @@ const AppointmentsPage = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="dark:bg-[#293549]">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -387,7 +390,7 @@ const AppointmentsPage = () => {
             </div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="dark:bg-[#293549]">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
@@ -406,7 +409,7 @@ const AppointmentsPage = () => {
       </div>
 
       {/* Filters and Search */}
-      <Card>
+      <Card className="dark:bg-[#293549]">
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle className="flex items-center gap-2">
@@ -423,22 +426,22 @@ const AppointmentsPage = () => {
             {/* Search */}
             <div className="lg:col-span-2">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4 dark:bg-slate-900" />
                 <Input
                   placeholder="Search patients, doctors, or appointment ID..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
+                  className="pl-10 dark:bg-slate-900"
                 />
               </div>
             </div>
 
             {/* Status Filter */}
             <Select value={statusFilter} onValueChange={setStatusFilter}>
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-slate-900">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-slate-900">
                 <SelectItem value="all">All Status</SelectItem>
                 <SelectItem value="scheduled">Scheduled</SelectItem>
                 <SelectItem value="confirmed">Confirmed</SelectItem>
@@ -451,10 +454,10 @@ const AppointmentsPage = () => {
 
             {/* Type Filter */}
             <Select value={typeFilter} onValueChange={setTypeFilter}>
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-slate-900">
                 <SelectValue placeholder="Type" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-slate-900">
                 <SelectItem value="all">All Types</SelectItem>
                 {uniqueTypes.map((type) => (
                   <SelectItem key={type} value={type}>
@@ -466,10 +469,10 @@ const AppointmentsPage = () => {
 
             {/* Doctor Filter */}
             <Select value={doctorFilter} onValueChange={setDoctorFilter}>
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-slate-900">
                 <SelectValue placeholder="Doctor" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-slate-900">
                 <SelectItem value="all">All Doctors</SelectItem>
                 {uniqueDoctors.map((doctor) => (
                   <SelectItem key={doctor} value={doctor}>
@@ -481,10 +484,10 @@ const AppointmentsPage = () => {
 
             {/* Priority Filter */}
             <Select value={priorityFilter} onValueChange={setPriorityFilter}>
-              <SelectTrigger>
+              <SelectTrigger className="dark:bg-slate-900">
                 <SelectValue placeholder="Priority" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="dark:bg-slate-900">
                 <SelectItem value="all">All Priorities</SelectItem>
                 <SelectItem value="low">Low</SelectItem>
                 <SelectItem value="medium">Medium</SelectItem>
@@ -495,7 +498,7 @@ const AppointmentsPage = () => {
 
             {/* Date Filter */}
             <Popover>
-              <PopoverTrigger asChild>
+              <PopoverTrigger className="dark:bg-slate-900" asChild>
                 <Button
                   variant="outline"
                   className="justify-start text-left font-normal"
@@ -506,7 +509,10 @@ const AppointmentsPage = () => {
                     : "Select date"}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
+              <PopoverContent
+                className="w-auto p-0 dark:bg-slate-900"
+                align="start"
+              >
                 <Calendar
                   mode="single"
                   selected={dateFilter}
@@ -520,7 +526,7 @@ const AppointmentsPage = () => {
       </Card>
 
       {/* Appointments Table */}
-      <Card>
+      <Card className="dark:bg-[#293549]">
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>
