@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       icon: Stethoscope,
       href: "/dashboard/doctors",
       children: [
-        { title: "All Doctors", href: "/dashboard/doctors/all" },
+        { title: "All Doctors", href: "/doctors/list" },
         { title: "Specialties", href: "/dashboard/doctors/specialties" },
         { title: "Add Doctor", href: "/dashboard/doctors/add" },
         {
@@ -82,13 +82,13 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
       ],
     },
     {
-      title: "Patients",
+      title: "Parents",
       icon: Users,
       href: "/dashboard/patients",
       children: [
-        { title: "All Patients", href: "/dashboard/patients/all" },
+        { title: "All Parents", href: "/pet-parents/list" },
         { title: "Medical Records", href: "/dashboard/patients/records" },
-        { title: "Add Patient", href: "/dashboard/patients/add" },
+        { title: "Add Parents", href: "/dashboard/patients/add" },
       ],
     },
     {
