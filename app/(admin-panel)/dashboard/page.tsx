@@ -162,7 +162,8 @@ const Dashboard = () => {
             Dashboard Overview
           </h1>
           <p className="text-gray-600 mt-1 dark:text-blue-100">
-            Welcome back! Here&aps;s what&aps;s happening at your clinic today.
+            Welcome back! Here&#x27;s what&#x27;s happening at your clinic
+            today.
           </p>
         </div>
         <div className="flex items-center space-x-3">
