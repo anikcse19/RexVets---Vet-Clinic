@@ -91,54 +91,55 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         { title: "Add Parents", href: "/dashboard/patients/add" },
       ],
     },
+    // {
+    //   title: "Staff",
+    //   icon: UserCheck,
+    //   href: "/dashboard/staff",
+    //   children: [
+    //     { title: "All Staff", href: "/dashboard/staff/all" },
+    //     { title: "Nurses", href: "/dashboard/staff/nurses" },
+    //     { title: "Support Staff", href: "/dashboard/staff/support" },
+    //   ],
+    // },
     {
-      title: "Staff",
-      icon: UserCheck,
-      href: "/dashboard/staff",
-      children: [
-        { title: "All Staff", href: "/dashboard/staff/all" },
-        { title: "Nurses", href: "/dashboard/staff/nurses" },
-        { title: "Support Staff", href: "/dashboard/staff/support" },
-      ],
-    },
-    {
-      title: "Transactions",
+      title: "Donations",
       icon: CreditCard,
-      href: "/dashboard/transactions",
-      children: [
-        { title: "All Transactions", href: "/dashboard/transactions/all" },
-        { title: "Payments", href: "/dashboard/transactions/payments" },
-        { title: "Insurance", href: "/dashboard/transactions/insurance" },
-      ],
+      href: "/donations",
+      // children: [
+      //   { title: "All Transactions", href: "/dashboard/transactions/all" },
+      //   { title: "Payments", href: "/dashboard/transactions/payments" },
+      //   { title: "Insurance", href: "/dashboard/transactions/insurance" },
+      // ],
     },
-    {
-      title: "Reports",
-      icon: FileText,
-      href: "/dashboard/reports",
-      children: [
-        { title: "Financial Reports", href: "/dashboard/reports/financial" },
-        { title: "Patient Reports", href: "/dashboard/reports/patients" },
-        { title: "Analytics", href: "/dashboard/reports/analytics" },
-      ],
-    },
+    // {
+    //   title: "Reports",
+    //   icon: FileText,
+    //   href: "/reports",
+    //   // children: [
+    //   //   { title: "Financial Reports", href: "/dashboard/reports/financial" },
+    //   //   { title: "Patient Reports", href: "/dashboard/reports/patients" },
+    //   //   { title: "Analytics", href: "/dashboard/reports/analytics" },
+    //   // ],
+    // },
     {
       title: "Reviews",
       icon: Star,
-      href: "/dashboard/reviews",
-      children: [
-        { title: "Patient Reviews", href: "/dashboard/reviews/patients" },
-        { title: "Doctor Reviews", href: "/dashboard/reviews/doctors" },
-        { title: "Feedback", href: "/dashboard/reviews/feedback" },
-      ],
+      href: "/reviews",
+      // children: [
+      //   { title: "Patient Reviews", href: "/dashboard/reviews/patients" },
+      //   { title: "Doctor Reviews", href: "/dashboard/reviews/doctors" },
+      //   { title: "Feedback", href: "/dashboard/reviews/feedback" },
+      // ],
     },
     {
       title: "Settings",
       icon: Settings,
       href: "/dashboard/settings",
       children: [
-        { title: "General", href: "/dashboard/settings/general" },
-        { title: "Notifications", href: "/dashboard/settings/notifications" },
-        { title: "Security", href: "/dashboard/settings/security" },
+        { title: "Moderator", href: "/settings/moderator" },
+        // { title: "General", href: "/dashboard/settings/general" },
+        // { title: "Notifications", href: "/dashboard/settings/notifications" },
+        // { title: "Security", href: "/dashboard/settings/security" },
       ],
     },
   ];
